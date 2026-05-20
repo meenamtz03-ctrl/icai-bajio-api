@@ -27,6 +27,9 @@ async def verificar_api_key(key: str = Security(api_key_header)):
 
 # ── App ───────────────────────────────────────────────────────────────
 app = FastAPI(
+    docs_url="/docs",
+    redoc_url="/redoc",
+    openapi_url="/openapi.json",
     title="API - Indice de Atractividad Industrial del Bajio",
     description="""
 API que expone los datos del Indice Compuesto de Atractividad Industrial (ICAI)
